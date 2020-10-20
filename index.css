@@ -59,10 +59,10 @@ html {
   
   .hole {
     flex: 1 0 20.00%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: relative;
-    /*border-style: solid;
-    border-color: black;*/
+    border-style: solid;
+    border-color: black;
   }
   
   .hole:after {
@@ -78,7 +78,7 @@ html {
 
   
   .mole {
-    background:url("coronagif2.gif") bottom center no-repeat;
+    background:url("img/coronagif2.gif") bottom center no-repeat;
     background-size:60%;
     position: absolute;
     top: 100%;
