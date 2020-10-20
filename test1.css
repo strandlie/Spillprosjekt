@@ -1,0 +1,220 @@
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    padding: 0;
+    margin:0;
+    font-family: 'Amatic SC', cursive;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 4rem;
+    line-height:1;
+    margin-bottom: 0;
+  }
+  
+  /*.score {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    font-size: 4rem;
+    line-height:1;
+    margin-bottom: 0;
+    padding:0 3rem;
+    border-radius:1rem;
+  }*/
+
+
+ /* #start {
+      width: 60px;
+      height: 60px;
+    background-position-x: center;
+    background-position-x: center;
+    }*/
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+  
+  .game {
+    background: url("spillbakgrunn.png") no-repeat;
+    background-size: 1000px 500px;
+    width:1000px;
+    height:500px;
+    display:flex;
+    flex-wrap:wrap;
+    margin:0 auto; 
+    border-style: solid;
+    border-color: black;
+  }
+  
+  .hole {
+    flex: 1 0 20.00%;
+    overflow: hidden;
+    position: relative;
+    /*border-style: solid;
+    border-color: black;*/
+  }
+  
+  .hole:after {
+    display: block;
+    background-size:contain;
+    content:'';
+    width: 100%;
+    height:70px;
+    position: absolute;
+    z-index: 2;
+    bottom:-30px;
+  }
+
+  
+  .mole {
+    background:url("coronagif2.gif") bottom center no-repeat;
+    background-size:60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    /*transition: all 0.4s;*/
+  }
+  
+  .hole.up .mole {
+    top:0;
+  }
+
+  /* Pictures */
+
+  #icecream {
+    width: auto;
+    height: 130px;
+    position: relative;
+    top: -490px;
+    right: -1050px;
+    overflow: visible;
+}
+
+#helicopter {
+  width: auto;
+  height: 150px;
+  position: relative;
+  top: -650px;
+  right: -960px;
+  overflow: visible;
+}
+
+#bus {
+  width: auto;
+  height: 140px;
+  position: relative;
+  top: -350px;
+  right: -360px;
+  overflow: visible;
+}
+
+#hostpital {
+  width: auto;
+  height: 340px;
+  position: relative;
+  top: -470px;
+  right: 645px;
+  overflow: visible;
+}
+
+#cafe {
+  width: auto;
+  height: 200px;
+  position: relative;
+  top: -675px;
+  right: -295px;
+  overflow: visible;
+}
+
+#car {
+  width: auto;
+  height: 140px;
+  position: relative;
+  top: -600px;
+  right: -145px;
+  overflow: visible;
+}
+
+#woman {
+  width: auto;
+  height: 120px;
+  position: relative;
+  top: -600px;
+  right: -160px;
+  overflow: visible;
+}
+
+#bike {
+  width: auto;
+  height: 90px;
+  position: relative;
+  top: -680px;
+  right: -160px;
+  overflow: visible;
+}
+
+#hotel {
+  width: auto;
+  height: 300px;
+  position: relative;
+  top: -480px;
+  right: 465px;
+  overflow: visible;
+}
+
+#bench {
+  width: auto;
+  height: 100px;
+  position: relative;
+  top: -680px;
+  right: -650px;
+  overflow: visible;
+}
+
+#scooter {
+  width: auto;
+  height: 100px;
+  position: relative;
+  top: -570px;
+  right: -160px;
+  overflow: visible;
+}
+
+#trafficlight {
+  width: auto;
+  height: 150px;
+  position: relative;
+  top: -540px;
+  right: 270px;
+  overflow: visible;
+}
+
+#orangecar {
+  width: auto;
+  height: 150px;
+  position: relative;
+  top: -580px;
+  right: -160px;
+  overflow: visible;
+}
+
+#restaurant {
+  width: auto;
+  height: 180px;
+  position: relative;
+  top: -490px;
+  right: -360px;
+  overflow: visible;
+}
