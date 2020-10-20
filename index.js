@@ -2,7 +2,7 @@
 
 const places = document.querySelectorAll(".place");
 const scoreBoard = document.querySelector(".score");
-const moles = document.querySelectorAll(".mole");
+const coronas = document.querySelectorAll(".corona");
 let lastplace;
 let timeUp = false;
 let score = 0;
@@ -47,4 +47,4 @@ function bonk(e) {
   scoreBoard.textContent = score;
 }
 
-moles.forEach(mole => mole.addEventListener("click", bonk));
+coronas.forEach(corona => corona.addEventListener("click", bonk));
