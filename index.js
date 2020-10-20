@@ -1,9 +1,9 @@
 
 
-const holes = document.querySelectorAll(".hole");
+const places = document.querySelectorAll(".place");
 const scoreBoard = document.querySelector(".score");
 const moles = document.querySelectorAll(".mole");
-let lastHole;
+let lastplace;
 let timeUp = false;
 let score = 0;
 
@@ -11,23 +11,23 @@ function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
-function randomHole(holes) {
-  const idx = Math.floor(Math.random() * holes.length);
-  const hole = holes[idx];
-  if (hole === lastHole) {
+function randomPlace(places) {
+  const idx = Math.floor(Math.random() * places.length);
+  const place = places[idx];
+  if (place === lastplace) {
     console.log("Ah nah thats the same one bud");
-    return randomHole(holes);
+    return randomPlace(places);
   }
-  lastHole = hole;
-  return hole;
+  lastplace = place;
+  return place;
 }
 
 function peep() {
   const time = randomTime(500, 1500);
-  const hole = randomHole(holes);
-  hole.classList.add("up");
+  const place = randomPlace(places);
+  place.classList.add("up");
   setTimeout(() => {
-    hole.classList.remove("up");
+    place.classList.remove("up");
     if (!timeUp) peep();
   }, time);
 }
