@@ -46,7 +46,7 @@ html {
     }
   
   .game {
-    background: url("spillbakgrunn.png") no-repeat;
+    background: url("img/spillbakgrunn.png") no-repeat;
     background-size: 1000px 500px;
     width:1000px;
     height:500px;
