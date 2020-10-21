@@ -20,15 +20,15 @@ html {
     font-size: 2rem;
     line-height:1;
     position: relative;
-    top: 120px;
-    left: 970px;
+    top: -710px;
+    left: 1060px;
   }
   #time-left {
     font-size: 2rem;
     line-height:1;
     position: relative;
-    top: 85px;
-    left: 770px;
+    top: -745px;
+    left: 840px;
   }
   #headline {
     text-align: center;
@@ -59,7 +59,7 @@ html {
     .button {
         display: flex;
         justify-content: center;
-        align-items: center;  
+        align-items: center;
     }
 
     .button :hover {
@@ -71,9 +71,9 @@ html {
   
   .game {
     background: url("img/spillbakgrunn.png") no-repeat;
-    background-size: 1000px 500px;
-    width:1000px;
-    height:500px;
+    background-size: 1250px 700px;
+    width:1250px;
+    height:700px;
     display:flex;
     flex-wrap:wrap;
     margin:0 auto; 
