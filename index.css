@@ -13,9 +13,23 @@ html {
     font-family: 'Amatic SC', cursive;
   }
   
-  h2 {
+  #score {
+    font-size: 2rem;
+    line-height:1;
+    position: relative;
+    top: 120px;
+    left: 970px;
+  }
+  #time-left {
+    font-size: 2rem;
+    line-height:1;
+    position: relative;
+    top: 85px;
+    left: 770px;
+  }
+  #headline {
     text-align: center;
-    font-size: 4rem;
+    font-size: 2rem;
     line-height:1;
     margin-bottom: 0;
   }
