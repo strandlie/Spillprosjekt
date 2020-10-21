@@ -9,9 +9,12 @@ html {
   
   body {
     padding: 0;
-    margin:0;
     font-family: 'Amatic SC', cursive;
+    margin: 0;
+    height: 100vh;
+    cursor:url('img/shot.png'),auto;
   }
+
   
   #score {
     font-size: 2rem;
@@ -58,6 +61,13 @@ html {
         justify-content: center;
         align-items: center;  
     }
+
+    .button :hover {
+      background-color: rgb(16, 175, 64);
+    color: #0d1a08;
+    }
+
+
   
   .game {
     background: url("img/spillbakgrunn.png") no-repeat;

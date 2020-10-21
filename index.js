@@ -6,7 +6,7 @@ const coronas = document.querySelectorAll(".corona");
 let lastplace;
 let timeUp = false;
 let score = 0;
-let elem = document.documentElement; // Setter elem til å være dokumentet
+let elem = document.documentElement; // Setter elem til å være hele html dokumentet.
 
 function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
@@ -40,6 +40,9 @@ function startGame() {
   peep();
   setTimeout(() => (timeUp = true), 30000);
 
+
+
+//Fullscreen
   if (
     document.fullscreenEnabled || /* Standard syntax */
     document.webkitFullscreenEnabled || /* Chrome, Safari & Opera */
@@ -58,7 +61,8 @@ function startGame() {
       elem.msRequestFullscreen();
     }
     
-  }
+  } 
+  //
 }
 
 function bonk(e) {
