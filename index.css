@@ -119,117 +119,135 @@ html {
 
   #icecream {
     width: auto;
-    height: 130px;
+    height: 120px;
     position: relative;
-    top: -490px;
-    right: -1050px;
+    top: -495px;
+    right: -990px;
     overflow: visible;
 }
 
 #helicopter {
   width: auto;
-  height: 150px;
+  height: 170px;
   position: relative;
-  top: -650px;
-  right: -960px;
+  top: -730px;
+  right: -860px;
   overflow: visible;
 }
 
 #bus {
   width: auto;
-  height: 140px;
+  height: 160px;
   position: relative;
-  top: -350px;
-  right: -360px;
+  top: -300px;
+  right: -140px;
   overflow: visible;
 }
 
 #hostpital {
   width: auto;
-  height: 340px;
+  height: 450px;
   position: relative;
-  top: -470px;
-  right: 645px;
+  top: -914px;
+  right: 250px;
   overflow: visible;
 }
 
 #cafe {
   width: auto;
-  height: 200px;
+  height: 250px;
   position: relative;
-  top: -675px;
-  right: -295px;
+  top: -1175px;
+  right: -11px;
   overflow: visible;
 }
 
 #car {
   width: auto;
-  height: 140px;
+  height: 160px;
   position: relative;
-  top: -600px;
-  right: -145px;
+  top: -1070px;
+  right: 170px;
   overflow: visible;
 }
 
 #woman {
   width: auto;
-  height: 120px;
+  height: 140px;
   position: relative;
-  top: -600px;
-  right: -160px;
+  top: -1070px;
+  right: 100px;
   overflow: visible;
 }
 
 #bike {
   width: auto;
-  height: 90px;
+  height: 110px;
   position: relative;
-  top: -680px;
-  right: -160px;
+  top: -1170px;
+  right: 110px;
   overflow: visible;
 }
 
 #hotel {
   width: auto;
-  height: 300px;
+  height: 370px;
   position: relative;
-  top: -480px;
-  right: 465px;
+  top: -931px;
+  right: 20px;
+  overflow: visible;
+}
+
+#tree1 {
+  width: auto;
+  height: 130px;
+  position: relative;
+  top: -1280px;
+  right: 10px;
+  overflow: visible;
+}
+
+#tree2 {
+  width: auto;
+  height: 150px;
+  position: relative;
+  top: -1400px;
+  right: -1140px;
   overflow: visible;
 }
 
 #bench {
   width: auto;
-  height: 100px;
+  height: 70px;
   position: relative;
-  top: -680px;
-  right: -650px;
+  top: -1190px;
+  right: -500px;
   overflow: visible;
 }
 
 #scooter {
   width: auto;
-  height: 100px;
+  height: 120px;
   position: relative;
-  top: -570px;
-  right: -160px;
+  top: -1020px;
+  right: 180px;
   overflow: visible;
 }
 
 #trafficlight {
   width: auto;
-  height: 150px;
+  height: 190px;
   position: relative;
-  top: -540px;
-  right: 270px;
+  top: -983px;
+  right: 600px;
   overflow: visible;
 }
 
 #orangecar {
   width: auto;
-  height: 150px;
+  height: 180px;
   position: relative;
-  top: -580px;
+  top: -1050px;
   right: -160px;
   overflow: visible;
 }
@@ -238,7 +256,7 @@ html {
   width: auto;
   height: 180px;
   position: relative;
-  top: -490px;
-  right: -360px;
+  top: -492px;
+  right: -190px;
   overflow: visible;
 }
