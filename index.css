@@ -15,7 +15,7 @@ html {
     cursor:url('img/shot.png'),auto;
   }
 
-  
+
   #score {
     font-size: 2rem;
     line-height:1;
@@ -23,7 +23,7 @@ html {
     top: -710px;
     left: 1060px;
   }
-  #time-left {
+  #timer {
     font-size: 2rem;
     line-height:1;
     position: relative;

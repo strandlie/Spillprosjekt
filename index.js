@@ -7,6 +7,21 @@ let lastplace;
 let timeUp = false;
 let score = 0;
 let elem = document.documentElement; // Setter elem til å være hele html dokumentet.
+//lager nedtellingsfunksjon fra 20 sekunder, teller ned.
+let nedtellingstart = 30;
+//let points = 0;
+let pointsText = document.getElementById('score');
+let timer = document.getElementById('timer');
+//let button = document.getElementById('button');
+
+setInterval(() => {
+  nedtellingstart--;
+  timer.innerText = "Time left " + nedtellingstart;
+  if (nedtellingstart === 0) {
+    alert('Game over! You got ' + score + ' points')
+    location.reload();
+  }
+}, 1000);
 
 function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
@@ -42,14 +57,14 @@ function startGame() {
 
 
 
-//Fullscreen
+  //Fullscreen
   if (
     document.fullscreenEnabled || /* Standard syntax */
     document.webkitFullscreenEnabled || /* Chrome, Safari & Opera */
     document.mozFullScreenEnabled || /* Firefox */
     document.msFullscreenEnabled /* IE/Edge */
   ) {
-   
+
     /* Show the element in fullscreen */
     if (elem.requestFullscreen) {
       elem.requestFullscreen(); /* Standard syntax */
@@ -60,8 +75,8 @@ function startGame() {
     } else if (elem.msRequestFullscreen) { /* IE/Edge */
       elem.msRequestFullscreen();
     }
-    
-  } 
+
+  }
   //
 }
 
