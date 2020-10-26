@@ -14,14 +14,7 @@ let pointsText = document.getElementById('score');
 let timer = document.getElementById('timer');
 //let button = document.getElementById('button');
 
-setInterval(() => {
-  nedtellingstart--;
-  timer.innerText = "Time left " + nedtellingstart;
-  if (nedtellingstart === 0) {
-    alert('Game over! You got ' + score + ' points')
-    location.reload();
-  }
-}, 1000);
+
 
 function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
@@ -48,12 +41,25 @@ function peep() {
   }, time);
 }
 
+//Starter spillet og setter tid.
 function startGame() {
   scoreBoard.textContent = 0;
   timeUp = false;
   score = 0;
   peep();
   setTimeout(() => (timeUp = true), 30000);
+  //
+
+  //Nedtelling tid
+  setInterval(() => {
+    nedtellingstart--;
+    timer.innerText = "Time left " + nedtellingstart;
+    if (nedtellingstart === 0) {
+      alert('Game over! You got ' + score + ' points')
+      location.reload();
+    }
+  }, 1000);
+  //
 
 
 
