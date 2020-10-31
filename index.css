@@ -117,15 +117,6 @@ html {
 
   /* Pictures */
 
-  #icecream {
-    width: auto;
-    height: 120px;
-    position: relative;
-    top: -495px;
-    right: -990px;
-    overflow: visible;
-}
-
 #helicopter {
   width: auto;
   height: 170px;
@@ -144,7 +135,7 @@ html {
   overflow: visible;
 }
 
-#hostpital {
+#hospital {
   width: auto;
   height: 450px;
   position: relative;
@@ -153,12 +144,12 @@ html {
   overflow: visible;
 }
 
-#cafe {
+#pharmacy {
   width: auto;
   height: 250px;
   position: relative;
-  top: -1175px;
-  right: -11px;
+  top: -1315px;
+  right: 100px;
   overflow: visible;
 }
 
@@ -171,29 +162,12 @@ html {
   overflow: visible;
 }
 
-#woman {
-  width: auto;
-  height: 140px;
-  position: relative;
-  top: -1070px;
-  right: 100px;
-  overflow: visible;
-}
 
-#bike {
-  width: auto;
-  height: 110px;
-  position: relative;
-  top: -1170px;
-  right: 110px;
-  overflow: visible;
-}
-
-#hotel {
+#pizza {
   width: auto;
   height: 370px;
   position: relative;
-  top: -931px;
+  top: -848px;
   right: 20px;
   overflow: visible;
 }
@@ -220,19 +194,11 @@ html {
   width: auto;
   height: 70px;
   position: relative;
-  top: -1190px;
-  right: -500px;
+  top: -1550px;
+  right: -300px;
   overflow: visible;
 }
 
-#scooter {
-  width: auto;
-  height: 120px;
-  position: relative;
-  top: -1020px;
-  right: 180px;
-  overflow: visible;
-}
 
 #trafficlight {
   width: auto;
@@ -260,3 +226,195 @@ html {
   right: -190px;
   overflow: visible;
 }
+
+/*People*/
+#dog {
+  width: auto;
+  height: 50px;
+  position: relative;
+  top: -492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#hotdog {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#pizzawoman {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#man1 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#man2 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#man3 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#man4 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#man5 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#man6 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#man7 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#man8 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#man9 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+
+#woman1 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#woman2 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#woman3 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#woman4 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#woman5 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#woman6 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#woman7 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1450px;
+  right: -190px;
+  overflow: visible;
+}
+
+#woman8 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -190px;
+  overflow: visible;
+}
+
+#woman9 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1458px;
+  right: -190px;
+  overflow: visible;
+}
+
