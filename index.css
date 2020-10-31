@@ -232,8 +232,8 @@ html {
   width: auto;
   height: 50px;
   position: relative;
-  top: -492px;
-  right: -190px;
+  top: -1492px;
+  right: -90px;
   overflow: visible;
 }
 
@@ -252,6 +252,33 @@ html {
   position: relative;
   top: -492px;
   right: -190px;
+  overflow: visible;
+}
+
+#oldwoman {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -90px;
+  overflow: visible;
+}
+
+#police {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1492px;
+  right: -50px;
+  overflow: visible;
+}
+
+#patient {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -92px;
+  right: -1490px;
   overflow: visible;
 }
 
@@ -418,3 +445,11 @@ html {
   overflow: visible;
 }
 
+#woman10 {
+  width: auto;
+  height: 80px;
+  position: relative;
+  top: -1458px;
+  right: -190px;
+  overflow: visible;
+}
