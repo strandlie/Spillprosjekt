@@ -128,7 +128,7 @@ html {
 
 #bus {
   width: auto;
-  height: 160px;
+  height: 190px;
   position: relative;
   top: -300px;
   right: -140px;
@@ -139,17 +139,17 @@ html {
   width: auto;
   height: 450px;
   position: relative;
-  top: -914px;
-  right: 250px;
+  top: -890px;
+  right: 350px;
   overflow: visible;
 }
 
 #pharmacy {
   width: auto;
-  height: 250px;
+  height: 220px;
   position: relative;
-  top: -1315px;
-  right: 100px;
+  top: -2150x;
+  right: -50px;
   overflow: visible;
 }
 
@@ -167,8 +167,8 @@ html {
   width: auto;
   height: 370px;
   position: relative;
-  top: -848px;
-  right: 20px;
+  top: -928px;
+  right: 230px;
   overflow: visible;
 }
 

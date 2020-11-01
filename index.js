@@ -14,6 +14,7 @@ let pointsText = document.getElementById('score');
 let timer = document.getElementById('timer');
 //let button = document.getElementById('button');
 
+let bgMusic = document.getElementById('bgMusic')
 
 
 function randomTime(min, max) {
@@ -84,6 +85,8 @@ function startGame() {
 
   }
   //
+
+  backMusic.play();
 }
 
 function bonk(e) {
