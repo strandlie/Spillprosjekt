@@ -15,6 +15,7 @@ let timer = document.getElementById('timer');
 //let button = document.getElementById('button');
 
 let bgMusic = document.getElementById('bgMusic')
+let CoronaDead = document.getElementById('CoronaDead')
 
 
 function randomTime(min, max) {
@@ -94,6 +95,8 @@ function bonk(e) {
   score++;
   this.parentNode.classList.remove("up");
   scoreBoard.textContent = score;
+
+  CoronaDead.play();
 }
 
 coronas.forEach(corona => corona.addEventListener("click", bonk));
