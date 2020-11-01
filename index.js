@@ -14,9 +14,14 @@ let pointsText = document.getElementById('score');
 let timer = document.getElementById('timer');
 //let button = document.getElementById('button');
 
+//Lydeffekter
 let bgMusic = document.getElementById('bgMusic')
 let CoronaDead = document.getElementById('CoronaDead')
+let AntibacSprut = document.getElementById('AntibacSprut')
 
+
+window.onclick = () =>{
+  AntibacSprut.play()}
 
 function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
@@ -87,8 +92,11 @@ function startGame() {
   }
   //
 
+  //Bakgrunnsmusikk
   backMusic.play();
+  //
 }
+
 
 function bonk(e) {
   if (!e.isTrusted) return; // cheater!
