@@ -39,7 +39,7 @@ function randomPlace(places) {
 }
 
 function peep() {
-  const time = randomTime(800, 1800);
+  const time = randomTime(1000, 1800);
   const place = randomPlace(places);
   place.classList.add("up");
   setTimeout(() => {
