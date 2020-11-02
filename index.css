@@ -111,12 +111,33 @@ html {
     height: 100%;
     /*transition: all 0.4s;*/
   }
+
   
   .place.up .corona {
     top:0;
   }
 
+  .shot {
+    background:url("img/shot.png") bottom center no-repeat;
+    background-size:60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    /*transition: all 0.4s;*/
+  }
+
   /* Pictures */
+
+
+  #icecream {
+    width: auto;
+    height: 170px;
+    position: relative;
+    top: -730px;
+    right: -860px;
+    overflow: visible;
+  }
 
 #helicopter {
   width: auto;
@@ -277,6 +298,15 @@ html {
 #patient {
   width: auto;
   height: 80px;
+  position: relative;
+  top: -92px;
+  right: -1490px;
+  overflow: visible;
+}
+
+#bicycle {
+  width: auto;
+  height: 70px;
   position: relative;
   top: -92px;
   right: -1490px;

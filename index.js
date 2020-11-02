@@ -3,6 +3,7 @@
 const places = document.querySelectorAll(".place");
 const scoreBoard = document.querySelector(".score");
 const coronas = document.querySelectorAll(".corona");
+const shots = document.querySelectorAll(".shot")
 let lastplace;
 let timeUp = false;
 let score = 0;
@@ -65,6 +66,10 @@ function startGame() {
       alert('Game over! You got ' + score + ' points')
       location.reload();
     }
+    /*if (shots.onclick) {
+      nedtellingstart +10;
+      timer.innerText = "Time left " + nedtellingstart;
+    }*/
   }, 1000);
   //
 
@@ -108,3 +113,20 @@ function bonk(e) {
 }
 
 coronas.forEach(corona => corona.addEventListener("click", bonk));
+
+/*function moreTime() {
+  if (shots.onclick) return;
+  nedtellingstart + 10;
+  timer.innerText = "Time left" + nedtellingstart;
+}
+shots.forEach(shot => shot.addEventListener("click", moreTime)); */
+
+/*let= extratime = 10;
+
+function moreTime (f) {
+  if(!f.isTrusted) return;
+  nedtellingstart + 10;
+  this.parentNode.classList.remove("up");
+  timer.innertext= "Time left" + nedtellingstart;
+}
+shots.forEach(shot => shot.addEventListener("click", moreTime)); */
