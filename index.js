@@ -2,6 +2,7 @@
 
 const places = document.querySelectorAll(".place");
 const scoreBoard = document.querySelector(".score");
+const shot = document.querySelector("#shot");
 const coronas = document.querySelectorAll(".corona, .corona2");
 let lastplace;
 let timeUp = false;
@@ -49,6 +50,46 @@ function peep() {
   }, time);
 }
 
+
+/**
+ * Beregner en tilfeldig posisjon på spillebrettet, 
+ * og viser sprøyta der. 
+ */
+function showShot() {
+  /*
+  *  Math.random() returnerer et tall mellom 0 og 1. 
+  *  Bytt ut 1000 / 350 med den største posisjonen som gir mening. 
+  */
+  const offsetFromLeft = Math.random() * 1000;
+  const offsetFromTop = Math.random() * 350;
+
+  const newStyle = "height: 200px; position: relative; left: " + offsetFromLeft + "px; top: " + -offsetFromTop + "px; ";
+  shot.style = newStyle;
+
+  // Vis sprøyta
+  shot.style.display = "block";
+
+  // La sprøyta være på skjermen mellom 1 og 2 sekunder
+  const timeToShow = randomTime(1000, 2000);
+
+  setTimeout(() => {
+    shot.style.display = "none";
+
+    // Når sprøyta ikke vises lenger, vent 2-10 sekunder før den vises på nytt.
+    // Vises på nytt ved å kalle showShot igjen. 
+    const timeUntilShowNext = randomTime(2000, 4000);
+    setTimeout(() => {
+      showShot();
+    }, timeUntilShowNext);
+  }, timeToShow)
+}
+
+// Når man trykker på sprøyta får man 5 ekstra sekunder
+function handleClickOnShot() {
+  console.log("Called");
+  nedtellingstart = nedtellingstart + 5;
+}
+
 //nedtelling til spillet starter
 // function startNedtelling() {
 //   setTimeout(startGame,3000)
@@ -60,6 +101,7 @@ function startGame() {
   timeUp = false;
   score = 0;
   peep();
+  showShot();
   setTimeout(() => (timeUp = true), 30000);
 
   //Skjuler startknapp
@@ -90,6 +132,7 @@ function startGame() {
     }
   }, 1000);
 
+
   function gameOver() {
     document.getElementById("gameOverScore").innerHTML = "You got " + score + " points";
     document.getElementById("game").style.filter = 'blur(2px)'
@@ -119,3 +162,4 @@ function bonk(e) {
 }
 
 coronas.forEach(corona => corona.addEventListener("click", bonk));
+shot.addEventListener("click", handleClickOnShot);
