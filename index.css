@@ -1,486 +1,330 @@
-html {
-    box-sizing: border-box;
-    font-size: 10px;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body {
-    padding: 0;
-    font-family: 'Amatic SC', cursive;
-    margin: 0;
-    height: 100vh;
-    cursor:url('img/shot.png'),auto;
-    background-color: rgb(26, 26, 26);
-  }
-
-
-  #score {
-    font-size: 2rem;
-    line-height:1;
-    position: relative;
-    top: -710px;
-    left: 1060px;
-  }
-  #timer {
-    font-size: 2rem;
-    line-height:1;
-    position: relative;
-    top: -745px;
-    left: 840px;
-  }
-  #headline {
-    text-align: center;
-    font-size: 2rem;
-    line-height:1;
-    margin-bottom: 0;
-  }
-  
-  /*.score {
-    display: flex;
-    justify-content: right;
-    align-items: right;
-    font-size: 4rem;
-    line-height:1;
-    margin-bottom: 0;
-    padding:0 3rem;
-    border-radius:1rem;
-  }*/
-
-
- /* #start {
-      width: 60px;
-      height: 60px;
-    background-position-x: center;
-    background-position-x: center;
-    }*/
-
-    .button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .button :hover {
-      background-color: rgb(16, 175, 64);
-    color: #0d1a08;
-    }
-
-
-  
-  .game {
-    background: url("img/spillbakgrunn.png") no-repeat;
-    background-size: 1250px 700px;
-    width:1250px;
-    height:700px;
-    display:flex;
-    flex-wrap:wrap;
-    margin:0 auto; 
-    border-style: solid;
-    border-color: black;
-  }
-  
-  .place {
-    flex: 1 0 20.00%;
-    overflow: hidden;
-    position: relative;
-    border-style: solid;
-    border-color: black;
-  }
-  
-  .place:after {
-    display: block;
-    background-size:contain;
-    content:'';
-    width: 100%;
-    height:70px;
-    position: absolute;
-    z-index: 2;
-    bottom:-30px;
-  }
-
-  
-  .corona {
-    background:url("img/coronagif2.gif") bottom center no-repeat;
-    background-size:60%;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    height: 100%;
-    /*transition: all 0.4s;*/
-  }
-
-  
-  .place.up .corona {
-    top:0;
-  }
-
-  .shot {
-    background:url("img/shot.png") bottom center no-repeat;
-    background-size:60%;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    height: 100%;
-    /*transition: all 0.4s;*/
-  }
-
-  /* Pictures */
-
-
-  #icecream {
-    width: auto;
-    height: 170px;
-    position: relative;
-    top: -730px;
-    right: -860px;
-    overflow: visible;
-  }
-
-#helicopter {
-  width: auto;
-  height: 170px;
+.game {
+  background: url("img/spillbakgrunn.png") no-repeat;
+  background-size: 100% 96vh;
+  width:100%;
+  height:97vh;
+  display:flex;
+  flex-wrap:wrap;
+  margin:0 auto; 
+  /* border: solid black; */
   position: relative;
-  top: -730px;
-  right: -860px;
-  overflow: visible;
+
+  /* z-index: 0; */
+
+  filter: blur(2px);
 }
 
-#bus {
-  width: auto;
-  height: 190px;
-  position: relative;
-  top: -300px;
-  right: -140px;
+.button {
+  position: absolute;
+  height: 7vh;
+  top: 10px;
+  left: 10px;
+
+  z-index: 2;
+}
+
+.info {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+
+  z-index: 2;
+}
+#score, #timer {
+font-size: 3vh;
+}
+
+#gameOverDiv {
+  /* border: solid blue 5px; */
+  position: absolute;
   overflow: visible;
+  height: fit-content;
+  width: fit-content;
+  top: 10vh;
+  left: 50vh;
+  opacity: 95%;
+
+  z-index: 5;
+
+  /* border: chartreuse solid 5px; */
+}
+
+#gameOverText {
+  /* border: blue solid 5px; */
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  text-align: center;
+}
+
+#gameOverScore {
+  /* border: blue solid 5px; */
+  position: absolute;
+  top: 58%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  text-align: center;
+  
+  font-size: 25px;
+}
+
+#button2 {
+  position: absolute;
+  top: 72%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  text-align: center;
+}
+
+.buttonPlayAgain {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #1d9e89;
+  border: solid #188a77 4px;
+  border-radius: 15px;
+}
+.buttonPlayAgain:hover {background-color: #3e8e41}
+
+.buttonPlayAgain:active {
+  background-color: #188a77;
+  transform: translateY(2px);
+}
+
+/* #hospital, #scooter {
+filter: blur(8px);
+-webkit-filter: blur(8px);
+} */
+
+.place {
+  flex: 1 0 20.00%;
+  overflow: hidden;
+  position: relative;
+  /* border: solid black; */
+
+}
+
+/* .place9, .place13, .place14, .place15, .place16, .place17, .place18, .place19, .place20 {
+  border: solid blue 5px;
+  z-index: 10;
+} */
+
+.place:after {
+  display: block;
+  background-size:contain;
+  content:'';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom:-30px;
+}
+
+.corona {
+  background:url("img/coronagif2.gif") bottom center no-repeat;
+  background-size:60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+
+  /* border: solid 5px red; */
+
+  /*transition: all 0.4s;*/
+}
+
+.corona2 {
+  background:url("img/coronagif2.gif") bottom center no-repeat;
+  background-size:60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+
+  z-index: 3;
+
+  /* border: solid 5px blue; */
+
+  /*transition: all 0.4s;*/
+}
+
+.place.up .corona, .place.up .corona2 {
+  top:0;
+}
+
+#buildings {
+  border: solid 3px transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99%;
+  height: 96vh;
+
+  /* z-index: 1; */
+
+  pointer-events: none;
 }
 
 #hospital {
-  width: auto;
-  height: 450px;
-  position: relative;
-  top: -890px;
-  right: 350px;
+  position: absolute;
   overflow: visible;
+  width: auto;
+  height: 60vh;
+  top: 12vh;
+  left: 65vh;
+
+  z-index: 1;
 }
 
-#pharmacy {
-  width: auto;
-  height: 220px;
-  position: relative;
-  top: -2150x;
-  right: -50px;
+#scooter {
+  position: absolute;
   overflow: visible;
-}
-
-#car {
   width: auto;
-  height: 160px;
-  position: relative;
-  top: -1070px;
-  right: 170px;
-  overflow: visible;
-}
+  height: 18vh;
+  top: 60vh;
+  left: 70vh;
 
+  /* z-index: 1; */
+}
 
 #pizza {
-  width: auto;
-  height: 370px;
-  position: relative;
-  top: -928px;
-  right: 230px;
+  position: absolute;
   overflow: visible;
-}
-
-#tree1 {
   width: auto;
-  height: 130px;
-  position: relative;
-  top: -1280px;
-  right: 10px;
-  overflow: visible;
-}
+  height: 40vh;
+  top: 29vh;
+  left: 8.5vh;
 
-#tree2 {
-  width: auto;
-  height: 150px;
-  position: relative;
-  top: -1400px;
-  right: -1140px;
-  overflow: visible;
-}
-
-#bench {
-  width: auto;
-  height: 70px;
-  position: relative;
-  top: -1550px;
-  right: -300px;
-  overflow: visible;
-}
-
-
-#trafficlight {
-  width: auto;
-  height: 190px;
-  position: relative;
-  top: -983px;
-  right: 600px;
-  overflow: visible;
-}
-
-#orangecar {
-  width: auto;
-  height: 180px;
-  position: relative;
-  top: -1050px;
-  right: -160px;
-  overflow: visible;
+  z-index: 2;
 }
 
 #restaurant {
-  width: auto;
-  height: 180px;
-  position: relative;
-  top: -492px;
-  right: -190px;
+  position: absolute;
   overflow: visible;
+  width: auto;
+  height: 23vh;
+  top: 42vh;
+  left: 8vh;
+
+  z-index: 1;
+  
 }
 
-/*People*/
-#dog {
-  width: auto;
-  height: 50px;
-  position: relative;
-  top: -1492px;
-  right: -90px;
+#barbershop {
+  position: absolute;
   overflow: visible;
+  width: auto;
+  height: 23vh;
+  top: 42vh;
+  left: 50vh;
+
+  z-index: 1;
 }
 
-#hotdog {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -492px;
-  right: -190px;
+#bakehouse {
+  position: absolute;
   overflow: visible;
+  width: auto;
+  height: 32vh;
+  top: 33.5vh;
+  left: 126vh;
+
+  z-index: 1;
 }
 
-#pizzawoman {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -492px;
-  right: -190px;
+#grass {
+  position: absolute;
   overflow: visible;
+  width: auto;
+  height: 25vh;
+  top: 39.3vh;
 }
 
-#oldwoman {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -90px;
+#tree1 {
+  position: absolute;
   overflow: visible;
+  width: auto;
+  height: 15vh;
+  top: 45vh;
+  left: 157vh;
 }
 
-#police {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -50px;
+#tree2 {
+  position: absolute;
   overflow: visible;
+  width: auto;
+  height: 15vh;
+  top: 40vh;
+  left: 180vh;
+
+  z-index: 1;
 }
 
-#patient {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -92px;
-  right: -1490px;
+#icecream {
+  position: absolute;
   overflow: visible;
+  width: auto;
+  height: 15vh;
+  top: 52vh;
+  left: 165vh;
+
+  z-index: 1;
 }
 
-#bicycle {
-  width: auto;
-  height: 70px;
-  position: relative;
-  top: -92px;
-  right: -1490px;
+#helicopter {
+  position: absolute;
   overflow: visible;
+  width: auto;
+  height: 30vh;
+  left: 140vh;
+
+  z-index: 2;
+
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 10s forwards;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation: slide 5s steps(100) infinite alternate;
 }
 
-#man1 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
+@keyframes slide {
+  from{top: 1vh;}
+  to{top: 5vh;}
+  
 }
 
-#man2 {
+#bus {
+  position: absolute;
+  overflow: hidden;
   width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
+  height: 15vh;
+  top: 65vh;
+
+  /* -webkit-animation: slide2 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide2 10s forwards;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
 }
 
-#man3 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
+@keyframes slide2 {
+  from{left: 100%;}
+  to{left: 0;} */
 }
 
-#man4 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
-}
-
-#man5 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
-}
-
-#man6 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
-}
-
-#man7 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
-}
-
-#man8 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
-}
-
-#man9 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
-}
-
-
-#woman1 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
-}
-
-#woman2 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
-}
-
-#woman3 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
-}
-
-#woman4 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
-}
-
-#woman5 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
-}
-
-#woman6 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -492px;
-  right: -190px;
-  overflow: visible;
-}
-
-#woman7 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1450px;
-  right: -190px;
-  overflow: visible;
-}
-
-#woman8 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1492px;
-  right: -190px;
-  overflow: visible;
-}
-
-#woman9 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1458px;
-  right: -190px;
-  overflow: visible;
-}
-
-#woman10 {
-  width: auto;
-  height: 80px;
-  position: relative;
-  top: -1458px;
-  right: -190px;
-  overflow: visible;
-}

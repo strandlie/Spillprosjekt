@@ -2,14 +2,13 @@
 
 const places = document.querySelectorAll(".place");
 const scoreBoard = document.querySelector(".score");
-const coronas = document.querySelectorAll(".corona");
-const shots = document.querySelectorAll(".shot")
+const coronas = document.querySelectorAll(".corona, .corona2");
 let lastplace;
 let timeUp = false;
 let score = 0;
 let elem = document.documentElement; // Setter elem til å være hele html dokumentet.
-//lager nedtellingsfunksjon fra 20 sekunder, teller ned.
-let nedtellingstart = 30;
+//lager nedtellingsfunksjon fra 30 sekunder, teller ned.
+let nedtellingstart = 10;
 //let points = 0;
 let pointsText = document.getElementById('score');
 let timer = document.getElementById('timer');
@@ -20,7 +19,7 @@ let bgMusic = document.getElementById('bgMusic')
 let CoronaDead = document.getElementById('CoronaDead')
 let AntibacSprut = document.getElementById('AntibacSprut')
 
-
+//Lydeffekt når man trykker
 window.onclick = () =>{
   AntibacSprut.play()}
 
@@ -28,6 +27,7 @@ function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
+//forhinder corona å dukke opp i samme rute to ganger på rad
 function randomPlace(places) {
   const idx = Math.floor(Math.random() * places.length);
   const place = places[idx];
@@ -40,7 +40,7 @@ function randomPlace(places) {
 }
 
 function peep() {
-  const time = randomTime(1000, 1800);
+  const time = randomTime(1000, 1500);
   const place = randomPlace(places);
   place.classList.add("up");
   setTimeout(() => {
@@ -49,6 +49,11 @@ function peep() {
   }, time);
 }
 
+//nedtelling til spillet starter
+// function startNedtelling() {
+//   setTimeout(startGame,3000)
+// }
+
 //Starter spillet og setter tid.
 function startGame() {
   scoreBoard.textContent = 0;
@@ -56,52 +61,53 @@ function startGame() {
   score = 0;
   peep();
   setTimeout(() => (timeUp = true), 30000);
+
+  //Skjuler startknapp
+  // var startknapp = document.getElementById('start');
+  //   if (startknapp.style.display === "none") {
+  //     startknapp.style.display = "block";
+  //   } else {
+  //     startknapp.style.display = "none"
+  //   }
   //
 
   //Nedtelling tid
-  setInterval(() => {
+  let nedtelling = setInterval(() => {
     nedtellingstart--;
     timer.innerText = "Time left " + nedtellingstart;
     if (nedtellingstart === 0) {
-      alert('Game over! You got ' + score + ' points')
-      location.reload();
+      // alert('Game over! You got ' + score + ' points')
+
+      //Stopper nedtelling og viser gameover box
+      // gameOver();
+      document.getElementById("gameOverDiv").style.display = 'block';
+      clearInterval(nedtelling);
+      timeUp = true;
+
+      gameOver();
+
+      // location.reload();
     }
-    /*if (shots.onclick) {
-      nedtellingstart +10;
-      timer.innerText = "Time left " + nedtellingstart;
-    }*/
   }, 1000);
-  //
 
-
-
-  //Fullscreen
-  if (
-    document.fullscreenEnabled || /* Standard syntax */
-    document.webkitFullscreenEnabled || /* Chrome, Safari & Opera */
-    document.mozFullScreenEnabled || /* Firefox */
-    document.msFullscreenEnabled /* IE/Edge */
-  ) {
-
-    /* Show the element in fullscreen */
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen(); /* Standard syntax */
-    } else if (elem.mozRequestFullScreen) { /* Firefox */
-      elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-      elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE/Edge */
-      elem.msRequestFullscreen();
-    }
-
+  function gameOver() {
+    document.getElementById("gameOverScore").innerHTML = "You got " + score + " points";
+    document.getElementById("game").style.filter = 'blur(2px)'
   }
-  //
+
+  //Skjuler gameover box når spillet starter
+  if (nedtellingstart !== 0) {
+    document.getElementById("gameOverDiv").style.display = 'none';
+    document.getElementById("game").style.filter = 'blur(0)'
+  }
 
   //Bakgrunnsmusikk
   backMusic.play();
-  //
 }
 
+function restartGame() {
+  location.reload();
+}
 
 function bonk(e) {
   if (!e.isTrusted) return; // cheater!
@@ -113,20 +119,3 @@ function bonk(e) {
 }
 
 coronas.forEach(corona => corona.addEventListener("click", bonk));
-
-/*function moreTime() {
-  if (shots.onclick) return;
-  nedtellingstart + 10;
-  timer.innerText = "Time left" + nedtellingstart;
-}
-shots.forEach(shot => shot.addEventListener("click", moreTime)); */
-
-/*let= extratime = 10;
-
-function moreTime (f) {
-  if(!f.isTrusted) return;
-  nedtellingstart + 10;
-  this.parentNode.classList.remove("up");
-  timer.innertext= "Time left" + nedtellingstart;
-}
-shots.forEach(shot => shot.addEventListener("click", moreTime)); */

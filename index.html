@@ -7,39 +7,53 @@
   <title>Document</title>
 </head>
 
-<body>
+<body onload="startGame()">
   <link rel="stylesheet" href="index.css">
-  <div class="button"><button onClick="startGame()" id="start">Play</button></div>
-  <br>
   <div>
-    <div width="100%" class="game">
+    <div class="game" id="game">
+      <!--<div class="button"><button onClick="startGame()" id="start">Play</button></div>-->
+      
+          <div id="buildings">
+            <img src="img/icecream.png" alt="" id="icecream">
+            <img src="img/helicopter.png" alt="" id="helicopter">
+            <img src="img/bus.png" alt="" id="bus"> 
+            <img src="img/restaurant.png" alt="" id="restaurant">
+            <img src="img/pizza.png" alt="" id="pizza">
+            <img src="img/hospital.png" alt="" id="hospital">
+            <img src="img/barbershop.png" alt="" id="barbershop">
+            <img src="img/bakehouse.png" alt="" id="bakehouse">
+            <img src="img/grass.png" alt="" id="grass">
+            <img src="img/tree1.png" alt="" id="tree1">
+            <img src="img/tree2.png" alt="" id="tree2"> 
+            <!-- <img src="img/car.png" alt="" id="car"> 
+            <img src="img/trafficlight.png" alt="" id="trafficlight">
+            <img src="img/orangecar.png" alt="" id="orangecar">
+            <img src="img/pharmacy.png" alt="" id="pharmacy">-->
+    </div>
+
       <div class="place place1">
         <div class="corona"></div>
-        <div class="shot"></div>
       </div>
       <div class="place place2">
         <div class="corona"></div>
-        <div class="shot"></div>
       </div>
       <div class="place place3">
         <div class="corona"></div>
-        <div class="shot"></div>
       </div>
       <div class="place place4">
         <div class="corona"></div>
-        <div class="shot"></div>
       </div>
       <div class="place place5">
         <div class="corona"></div>
       </div>
       <div class="place place6">
-        <div class=""></div>
+        <div class="corona"></div>
       </div>
       <div class="place place7">
-        <div class=""></div>
+        <div class="corona"></div>
       </div>
       <div class="place place8">
-        <div class=""></div>
+        <div class="corona2"></div>
       </div>
       <div class="place place9">
         <div class="corona"></div>
@@ -48,109 +62,64 @@
         <div class="corona"></div>
       </div>
       <div class="place place11">
-        <div class="corona"></div>
+        <div class="corona2"></div>
       </div>
       <div class="place place12">
-        <div class=""></div>
+        <div class="corona2"></div>
       </div>
       <div class="place place13">
-        <div class=""></div>
+        <div class="corona2"></div>
       </div>
       <div class="place place14">
-        <div class=""></div>
+        <div class="corona2"></div>
       </div>
       <div class="place place15">
-        <div class="corona"></div>
+        <div class="corona2"></div>
       </div>
       <div class="place place16">
-        <div class="corona"></div>
+        <div class="corona2"></div>
       </div>
       <div class="place place17">
-        <div class="corona"></div>
+        <div class="corona2"></div>
       </div>
       <div class="place place18">
-        <div class=""></div>
+        <div class="corona2"></div>
       </div>
       <div class="place place19">
-        <div class="corona"></div>
+        <div class="corona2"></div>
       </div>
       <div class="place place20">
-        <div class="corona"></div>
+        <div class="corona2"></div>
       </div>
     </div>
-    <div></div>
-    <h2 id="score">Your score <span class="score">0</span></h2>
-    <h2 id="timer">Time left <span class="time-left">30</span></h2>
 
-    <div>
-      <img src="img/icecream.png" alt="" id="icecream" media="(max-width: 80%)">
-      <img src="img/helicopter.png" alt="" id="helicopter">
-      <img src="img/bus.png" alt="" id="bus">
-      <img src="img/restaurant.png" alt="" id="restaurant">
-      <img src="img/pizza.png" alt="" id="pizza">
-      <img src="img/hospital.png" alt="" id="hospital">
-      <img src="img/pharmacy.png" alt="" id="pharmacy">
-      <img src="img/car.png" alt="" id="car"> 
-      <img src="img/trafficlight.png" alt="" id="trafficlight">
-      <img src="img/orangecar.png" alt="" id="orangecar">
-      <img src="img/tree1.png" alt="" id="tree1">
-      <img src="img/tree2.png" alt="" id="tree2">
-
-      
-
-
-      <!--People-->
-      <img src="img/icecream.png" alt="" id="icecream">
-      <img src="imgpeo/bench.png" alt="" id="bench">  
-      <img src="imgpeo/dog.png" alt="" id="dog">
-      <img src="imgpeo/hotdogman.png" alt="" id="hotdog">
-      <img src="imgpeo/pizzawoman.png" alt="" id="pizzawoman">
-      <img src="imgpeo/policeman.png" alt="" id="police">
-      <img src="imgpeo/oldwoman.png" alt="" id="oldwoman">
-      <img src="imgpeo/patient.png" alt="" id="patient">
-      <img src="imgpeo/2-woman-riding-bike.png" alt="" id="bicycle">
-
-      <img src="imgpeo/man1.png" alt="" id="man1"> 
-      <img src="imgpeo/woman1.png" alt="" id="woman1">
-      <img src="imgpeo/man2.png" alt="" id="man2">
-      <img src="imgpeo/woman2.png" alt="" id="woman2">
-      <img src="imgpeo/man3.png" alt="" id="man3">
-      <img src="imgpeo/woman3.png" alt="" id="woman3">
-      <img src="imgpeo/man4.png" alt="" id="man4">
-      <img src="imgpeo/woman4.png" alt="" id="woman4">
-      <img src="imgpeo/man5.png" alt="" id="man5">
-      <img src="imgpeo/woman5.png" alt="" id="woman5">
-      <img src="imgpeo/man6.png" alt="" id="man6">
-      <img src="imgpeo/woman6.png" alt="" id="woman6">
-      <img src="imgpeo/man7.png" alt="" id="man7">
-      <img src="imgpeo/woman7.png" alt="" id="woman7">
-      <img src="imgpeo/man8.png" alt="" id="man8">
-      <img src="imgpeo/woman8.png" alt="" id="woman8">
-      <img src="imgpeo/man9.png" alt="" id="man9">
-      <img src="imgpeo/woman9.png" alt="" id="woman9">
-      <img src="imgpeo/woman10.png" alt="" id="woman10">
-
-      <audio id="backMusic" >
-        <source src="lyd/bgmusic.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-
-      <audio id="CoronaDead" >
-        <source src="lyd/CoronaDead3.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-
-      <audio id="AntibacSprut" >
-        <source src="lyd/AntibacSprut.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-
-
-
+    <div id="gameOverDiv">
+      <img src="img/CoronaWarsGameOver.png" alt="Game Over" id="gameOverBox">
+      <div id="gameOverText"><h1>GAME OVER</h1></div>
+      <div id="gameOverScore">Your score</div> <br>
+      <div id="button2"><button id="start" class="buttonPlayAgain" onclick="restartGame()">Play again</button></div>
     </div>
 
+    <!-- <div class="button"><img src="/img/startknapp.png" alt="Start" id="start" onclick="startGame()"></div> -->
+      <div class="info">
+        <h2 id="score">Your score <span class="score">0</span></h2>
+        <h2 id="timer">Time left <span class="time-left">30</span></h2>
+      </div>
+    
+    <audio id="backMusic" >
+        <source src="lyd/bgmusic.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
+    <audio id="CoronaDead" >
+        <source src="lyd/CoronaDead3.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
+    <audio id="AntibacSprut" >
+        <source src="lyd/AntibacSprut.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
     <script src="index.js"></script>
 
